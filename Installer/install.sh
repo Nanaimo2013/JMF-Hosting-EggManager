@@ -36,8 +36,9 @@ mkdir -p "$INSTALL_DIR"
 echo "[INFO] Cloning JMF EggManager into $INSTALL_DIR" | tee -a "$LOGFILE"
 git clone https://github.com/Nanaimo2013/JMF-Hosting-EggManager.git "$INSTALL_DIR"
 
-# Make all scripts executable
-chmod -R +x "$INSTALL_DIR/scripts"
+# Make all scripts executable in the modules directory and root
+chmod -R +x "$INSTALL_DIR/modules/*.sh"  # Make scripts in the modules directory executable
+chmod -R +x "$INSTALL_DIR/*.sh"           # Make any scripts in the root directory executable
 echo "[INFO] Made all scripts executable." | tee -a "$LOGFILE"
 
 # Completion message
