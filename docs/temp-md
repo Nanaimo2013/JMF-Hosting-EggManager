@@ -1,0 +1,10 @@
+chmod +x setup.sh
+./setup.sh
+
+cd JMF-Hosting-EggManager
+./jmf-cli.sh install     # 🧩 Installs eggs
+./jmf-cli.sh update      # 🔁 Pulls latest
+./jmf-cli.sh search ark  # 🔍 Search
+./jmf-cli.sh reset       # ♻️ Reset and reinstall
+
+
